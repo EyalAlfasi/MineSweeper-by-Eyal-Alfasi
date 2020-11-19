@@ -13,25 +13,37 @@
 <body onload="init()">
 
     <div class="board-container">
+
+        <div class="green-square1">
+            <h1 class="main-title">MineSweeper! by <b>Eyal Alfasi</b></h1>
+        </div>
+        <div class="green-square2"></div>
         <div class="inner-board-container">
             <div class="game-info">
                 <div class="difficulty">
-                    <input onclick="changeLevel()" type="radio" id="2" name="difficulty" checked value="4">
-                    <label for="2">Easy</label><br>
-                    <input onclick="changeLevel()" type="radio" id="12" name="difficulty" value="8">
-                    <label for="12">Medium</label><br>
-                    <input onclick="changeLevel()" type="radio" id="30" name="difficulty" value="12">
-                    <label for="30">hard</label>
+                    <div><input onclick="changeLevel()" type="radio" id="2" name="difficulty" checked value="4">
+                        <label for="2">Easy</label>
+                    </div>
+                    <div><input onclick="changeLevel()" type="radio" id="12" name="difficulty" value="8">
+                        <label for="12">Medium</label>
+                    </div>
+                    <div><input onclick="changeLevel()" type="radio" id="30" name="difficulty" value="12">
+                        <label for="30">hard</label>
+                    </div>
                 </div>
                 <div class="lives-section">
                     <h2 class="lives">❤️<span>3</span> </h2>
                 </div>
-                <div class="timer-and-flags">
-                    <h2 class="timer">🕒 <span>0.00</span> </h2>
-                    <span class="emoji" onclick="resetGame()">😀</span>
-                    <h2 class="flags">🚩<span></span> </h2>
+                <div class="timer-flags-reset">
+                    <div>
+                        <h2 class="timer">🕒 <span>0.00</span> </h2>
+                    </div>
+                    <div><span class="emoji" onclick="resetGame()">😀</span></div>
+                    <div>
+                        <h2 class="flags">🚩<span></span> </h2>
+                    </div>
                 </div>
-    
+
             </div>
             <table oncontextmenu="return false;">
             </table>

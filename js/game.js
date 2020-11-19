@@ -1,6 +1,8 @@
 'use strict'
 const FLAG = '🚩';
 const MINE = '💣';
+const WIN = '😎';
+const LOSE = '😎';
 
 var gLevel = {
     size: 4,
@@ -111,7 +113,7 @@ function gameOver(isVictory) {
     gGame.isOn = false;
     clearInterval(gTimerIntervalId);
     var elEmoji = document.querySelector('.emoji');
-    elEmoji.innerText = (isVictory) ? '🥳' : '🥴';
+    elEmoji.innerText = (isVictory) ? WIN : LOSE;
 }
 
 function resetGame() {

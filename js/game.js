@@ -27,6 +27,8 @@ function init() {
     renderBoard();
     var elFlagsCounter = document.querySelector('.flags span');
     elFlagsCounter.innerText = gLevel.mines;
+    var elBestScore = document.querySelector('.leaderboard p span')
+    elBestScore.innerText = localStorage.getItem('Time');
 }
 
 function onCellClick(elCell, i, j) {
@@ -82,7 +84,6 @@ function onCellClick(elCell, i, j) {
     renderCell({ i: i, j: j }, currValue);
     gGame.shownCount++;
 
-    console.log(gGame.shownCount);
     if (gGame.shownCount === 1) timer();
     else if (gGame.shownCount + gGame.markedCount === gLevel.size ** 2) gameOver(true);
 }
@@ -114,6 +115,7 @@ function gameOver(isVictory) {
     clearInterval(gTimerIntervalId);
     var elEmoji = document.querySelector('.emoji');
     elEmoji.innerText = (isVictory) ? WIN : LOSE;
+    setScoreLoacalStorage(isVictory);
 }
 
 function resetGame() {
@@ -141,4 +143,17 @@ function changeLevel() {
     gLevel.size = +currSize;
     gLevel.mines = +currMines;
     resetGame();
+}
+
+function setScoreLoacalStorage(isVictory) {
+    if (!isVictory) return;
+    var elTimer = document.querySelector('.timer span');
+    var elBestScore = document.querySelector('.leaderboard p span')
+    var time = elTimer.innerText;
+    if (!localStorage.getItem('Time')) {
+        localStorage.setItem('Time', `${time}`);
+    } else if (+time < +localStorage.getItem('Time')) {
+        localStorage.setItem('Time', `${time}`);
+    }
+    elBestScore.innerText = localStorage.getItem('Time');
 }

@@ -18,8 +18,8 @@ body {
     font-weight: 400;
 }
 
-@media screen and (max-width: 600px){
-    .main-title{
+@media screen and (max-width: 600px) {
+    .main-title {
         font-size: 1.8em;
     }
 }
@@ -51,8 +51,30 @@ body {
     align-items: center;
 }
 
+.leaderboard {
+    z-index: 9999;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #333333;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+
+}
+
+.leaderboard h3 {
+    color: #f9f9f9;
+}
+
+.leaderboard p {
+    color: #f9f9f9;
+    font-size: 2em;
+}
+
 table {
     margin: 25px 0px;
+    border-spacing: 0;
 }
 
 .game-info {
@@ -96,7 +118,7 @@ table {
     text-align: center;
     font-weight: 700;
     background-color: #C0C0C0;
-    border: 1.5px solid;
+    border: 4px solid;
     border-top-color: #ffffff;
     border-right-color: #7B7B7B;
     border-bottom-color: #7B7B7B;

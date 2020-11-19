@@ -83,7 +83,6 @@ function expandNegs(pos) {
             currNeg.isShown = true;
             renderCell({ i: i, j: j }, value);
             gGame.shownCount++;
-            console.log('negs', gGame.shownCount);
             if (gGame.shownCount === 1) timer();
         }
     }

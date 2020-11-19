@@ -84,6 +84,6 @@ function timer() {
     var elTimer = document.querySelector('.timer span');
     gTimerIntervalId = setInterval(function () {
         var timePassed = Date.now() - currTime;
-        elTimer.innerText = (parseInt(timePassed / 1000));
-    }, 1000)
+        elTimer.innerText = (timePassed / 1000).toFixed(2);
+    }, 100)
 }

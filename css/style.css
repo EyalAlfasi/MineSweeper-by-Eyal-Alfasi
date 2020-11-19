@@ -1,5 +1,6 @@
 body {
     font-family: 'Raleway', sans-serif;
+    background-color: #6497f5;
 }
 
 .board-container {
@@ -10,31 +11,75 @@ body {
     align-items: center;
 }
 
+.inner-board-container {
+    background-color: #8bb4ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+table {
+    margin: 50px 0px;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.game-info h2 {
+    margin: 10px;
+}
+
+.difficulty, .timer-and-flags, .lives-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
 .cell {
-    width: 40px;
-    height: 40px;
-    background-color: #dbd5d5;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
     text-align: center;
     font-weight: 700;
+    background-color: #C0C0C0;
+    border: 1.5px solid;
+    border-top-color: #ffffff;
+    border-right-color: #7B7B7B;
+    border-bottom-color: #7B7B7B;
+    border-left-color: #ffffff;
 }
 
-.shown{
-    background-color: rgb(137, 182, 197);
+.shown {
+    background-color: #C0C0C0;
+    border: none;
 }
 
-.marked{
+.marked {
     background-color: rgb(228, 172, 172);
 }
 
 .difficulty label:hover {
-    background-color: #0eb162;
+    background-color: #45fabe;
+}
+
+.difficulty label {
+    transition: background 0.2s ease;
+    font-weight: 900;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .difficulty input[type=radio]:checked+label {
-    background-color: #08ee7f;
+    background-color: #45fabe;
 }
 
 .difficulty input {
-    visibility: hidden;
+    display: none;
 }
+

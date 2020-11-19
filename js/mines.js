@@ -66,12 +66,25 @@ function expandNegs(pos) {
             if (currNeg.isShown) continue;
             var currNegClass = getClassName({ i: i, j: j });
             var elNeg = document.querySelector(`.${currNegClass}`);
+            switch (currNeg.minesAroundCount) {
+                case 1:
+                    var valueColor = '#0b4cad';
+                    break;
+                case 2:
+                    var valueColor = '#3ead0b';
+                    break;
+                case 3:
+                    var valueColor = '#d11c1c';
+                    break;
+            }
             elNeg.classList.add('shown');
+            elNeg.style.color = valueColor;
             var value = (currNeg.minesAroundCount === 0) ? '' : currNeg.minesAroundCount;
             currNeg.isShown = true;
             renderCell({ i: i, j: j }, value);
             gGame.shownCount++;
             console.log('negs', gGame.shownCount);
+            if (gGame.shownCount === 1) timer();
         }
     }
 }

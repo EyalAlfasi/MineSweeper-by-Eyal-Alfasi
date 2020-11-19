@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body onload="init()">
+
+    </div>
+    <div class="board-container">
+        <div class="difficulty">
+            <input onclick="changeLevel()" type="radio" id="2" name="difficulty" checked value="4">
+            <label for="2">Easy</label><br>
+            <input onclick="changeLevel()" type="radio" id="12" name="difficulty" value="8">
+            <label for="12">Medium</label><br>
+            <input onclick="changeLevel()" type="radio" id="30" name="difficulty" value="12">
+            <label for="30">hard</label>
+        </div>
+        <div class="game-info">
+            <h2 class="timer">Time: <span>0</span> </h2>
+            <span class="emoji" onclick="resetGame()">😀</span>
+        </div>
+        <table oncontextmenu="return false;">
+        </table>
+    </div>
+
+    <script src="js/util.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/mines.js"></script>
+</body>
+
+</html>

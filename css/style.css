@@ -1,0 +1,40 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.board-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #dbd5d5;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+}
+
+.shown{
+    background-color: rgb(137, 182, 197);
+}
+
+.marked{
+    background-color: rgb(228, 172, 172);
+}
+
+.difficulty label:hover {
+    background-color: #0eb162;
+}
+
+.difficulty input[type=radio]:checked+label {
+    background-color: #08ee7f;
+}
+
+.difficulty input {
+    visibility: hidden;
+}

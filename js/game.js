@@ -2,7 +2,7 @@
 const FLAG = '🚩';
 const MINE = '💣';
 const WIN = '😎';
-const LOSE = '😎';
+const LOSE = '🤯';
 
 var gLevel = {
     size: 4,
